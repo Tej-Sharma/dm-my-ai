@@ -19,6 +19,7 @@ import {
   Button,
   useToast,
   useColorModeValue,
+  ColorModeScript,
 } from '@chakra-ui/react';
 import theme from '@/theme/theme';
 import routes from '@/routes';
@@ -220,6 +221,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body id={'root'}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <AppWrappers>
           <Suspense fallback={<div>Loading...</div>}>
             <LayoutContent>{children}</LayoutContent>

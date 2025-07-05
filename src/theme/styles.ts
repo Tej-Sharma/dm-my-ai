@@ -1,5 +1,9 @@
 import { mode } from '@chakra-ui/theme-tools';
 export const globalStyles = {
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
+  },
   colors: {
     brand: {
       100: '#E9E3FF',

@@ -30,6 +30,7 @@ import {
   Textarea,
   useColorModeValue,
   useDisclosure,
+  useColorMode,
 } from '@chakra-ui/react';
 import {
   MdAutoAwesome,
@@ -48,6 +49,7 @@ interface Message {
 function ChatPage() {
   const searchParams = useSearchParams();
   const chatIdFromUrl = searchParams.get('chatting_with_id');
+  const { setColorMode } = useColorMode();
 
   // Input States
   const [inputCode, setInputCode] = useState<string>('');
@@ -73,6 +75,11 @@ function ChatPage() {
       setChatId(chatIdFromUrl);
     }
   }, [chatIdFromUrl]);
+
+  useEffect(() => {
+    // Force dark mode on component mount
+    setColorMode('dark');
+  }, [setColorMode]);
 
   const handleCreateChat = async () => {
     if (!constellaApiKey) {
