@@ -45,7 +45,7 @@ interface Message {
   content: string;
 }
 
-function ChatPage(props: { apiKeyApp: string }) {
+function ChatPage() {
   const searchParams = useSearchParams();
   const chatIdFromUrl = searchParams.get('chatting_with_id');
 
@@ -411,10 +411,10 @@ function ChatPage(props: { apiKeyApp: string }) {
   );
 }
 
-export default function Chat(props: { apiKeyApp: string }) {
+export default function Chat() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <ChatPage apiKeyApp={props.apiKeyApp} />
+      <ChatPage />
     </Suspense>
   );
 }
