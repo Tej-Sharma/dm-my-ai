@@ -115,7 +115,7 @@ export default function AdminNavbar(props: {
         <Box mb={{ base: '8px', md: '0px' }}>
           {/* Here we create navbar brand, based on route name */}
           <Link
-            color={mainText}
+            color="white"
             href="#"
             bg="inherit"
             borderRadius="inherit"
