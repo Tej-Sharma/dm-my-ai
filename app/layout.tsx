@@ -220,6 +220,14 @@ function LayoutContent({ children }: { children: ReactNode }) {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <title>DM My AI: By Constella App</title>
+        <meta
+          name="description"
+          content="Let people talk to your second brain. Share knowledge with them, help find friends, and more."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body id={'root'}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <AppWrappers>

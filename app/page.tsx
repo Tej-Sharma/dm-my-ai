@@ -79,6 +79,8 @@ function ChatPage() {
   useEffect(() => {
     // Force dark mode on component mount
     setColorMode('dark');
+    // Set document title
+    document.title = 'DM My AI: By Constella App';
   }, [setColorMode]);
 
   const handleCreateChat = async () => {
